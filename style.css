@@ -3,3 +3,132 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 62.5%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    padding: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(255px , 255px));
+    grid-template-rows: auto auto;
+    grid-gap: 30px;
+    grid-template-areas: 
+    "first first second third"
+    "fourth fifth fifth third";
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    align-items: center;
+    justify-items: center;
+}
+
+section {
+    border-radius: 10px;
+}
+
+.container {
+    width: 88.15%;
+    height: 100%;
+    margin: auto;
+    padding-top: 2.4em;
+    padding-bottom: 2.4em
+}
+
+.first-logo-name {
+    display: flex;
+}
+
+
+.first {
+    background-color: hsl(263, 55%, 52%);
+    grid-area: first;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+}
+
+.second {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: second;
+}
+
+.third {
+    background-color: white;
+    grid-area: third;
+}
+
+.fourth {
+    background-color: white;
+    grid-area: fourth;
+}
+
+.fifth {
+    background-color: hsl(219, 29%, 14%);
+    grid-area: fifth;
+}
+
+.quote-img {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    z-index: -1;
+}
+
+.profile-img {
+    width: 28px;
+    border-radius: 50%;
+    border: solid;
+    border-width: 2px;
+}
+
+.first .profile-img {
+    border-color: hsla(0, 0%, 100%, 0.507);
+}
+
+.name-verification {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 1.6rem;
+}
+
+.name {
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.verification {
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%, 0.5);
+    font-weight: 500;
+}
+
+.main-text {
+    font-size: 2rem;
+    padding-top: 2rem;
+    color: white;
+}
+
+.quote {
+    padding-top: 2rem;
+    color: rgba(255, 255, 255, 0.699);
+}
+
+.second .profile-img {
+    border-color: hsla(0, 0%, 100%, 0.507);
+}
