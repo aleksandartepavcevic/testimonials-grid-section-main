@@ -17,10 +17,10 @@ body {
 
 main {
     display: grid;
+    padding: 2.4em;
     justify-content: center;
-    padding: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(255px , 255px));
-    grid-template-rows: auto auto;
+    grid-template-rows: 282px 266px;
     grid-gap: 30px;
     grid-template-areas: 
     "first first second third"
@@ -37,18 +37,19 @@ main {
 
 section {
     border-radius: 10px;
+    box-shadow: 5px 10px 20px rgba(128, 128, 128, 0.5);
 }
 
 .container {
-    width: 88.15%;
+    /* width: 88.15%; */
     height: 100%;
-    margin: auto;
-    padding-top: 2.4em;
-    padding-bottom: 2.4em
+    /* margin: auto; */
+    padding: 2.4em 3.2em;
 }
 
-.first-logo-name {
+.logo-name {
     display: flex;
+    align-items: center;
 }
 
 
@@ -89,7 +90,8 @@ section {
 }
 
 .profile-img {
-    width: 28px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: solid;
     border-width: 2px;
@@ -107,13 +109,13 @@ section {
 }
 
 .name {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: hsl(0, 0%, 100%);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .verification {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: hsl(0, 0%, 100%, 0.5);
     font-weight: 500;
 }
@@ -127,8 +129,98 @@ section {
 .quote {
     padding-top: 2rem;
     color: rgba(255, 255, 255, 0.699);
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
 .second .profile-img {
     border-color: hsla(0, 0%, 100%, 0.507);
+}
+
+.third .name ,
+.fourth .name {
+    color: hsl(217, 19%, 35%);
+}
+
+.third .verification ,
+.fourth .verification {
+    color: hsla(217, 19%, 35%, 0.5);
+}
+
+.third .main-text ,
+.fourth .main-text {
+    color: hsl(217, 19%, 35%);
+}
+
+.third .quote ,
+.fourth .quote {
+    color: hsla(217, 19%, 35%, 0.699);
+}
+
+.third .profile-img ,
+.fourth .profile-img {
+    border-color: white;
+}
+
+.fifth .profile-img {
+    border-color: hsl(263, 55%, 52%);
+}
+
+@media screen and (max-width: 1160px) {
+    .wrapper {
+        grid-template-rows: unset;
+    }
+
+    main {
+        grid-template-rows: 282px 266px 282px;
+        grid-template-areas: 
+        "first first second"
+        "fourth fifth fifth"
+        "third third .";
+    } 
+}
+
+@media screen and (max-width: 870px) {
+    main {
+        grid-template-areas: 
+        "first first"
+        "second fourth"
+        "fifth fifth"
+        "third third";
+    }
+}
+
+@media screen and (max-width: 570px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "first"
+        "second"
+        "fourth"
+        "fifth"
+        "third";
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    main {
+        transform: scale(1.15);
+    }
+
+    .wrapper {
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 2048px) {
+    main {
+        transform: scale(1.25);
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    main {
+        transform: scale(1.4);
+    }
 }
